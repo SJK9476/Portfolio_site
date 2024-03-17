@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Samuel King - Developer Portfolio</title>
+    <link rel="stylesheet" href="newBuild.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran&family=Exo:wght@600&family=Major+Mono+Display&family=Montserrat:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a href="#top" class="logo" role="link">Samuel.</a>
+
+        <nav class="navigation-bar" role="list">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#socials">Socials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="button">
+            <button onclick="myFunction()">Toggle light/dark mode</button>
+          </li>
+        </nav>
+      </header>
+
+      <main>
+        <div class="welcome-banner">
+          <div class="welcome-message">
+            <h1 class="main-heading">
+              Hi, my name is <span>Samuel King.</span>
+            </h1>
+            <p class="heading-blurb">
+              I am a junior developer with a keen interest in
+              <span>Front-End design</span>
+              and I can't wait to collaborate with you in the future.
+            </p>
+          </div>
+          <img
+            src="resources/self-portrait.jpg"
+            alt=""
+            class="profile-picture"
+          />
+        </div>
+
+        <div class="about-section" id="about">
+          <h2 class="section-title">About Me</h2>
+
+          <p class="content">
+            Hi there! As i'm sure you've already guessed, my name is Samuel and
+            I am a trainee web developer. With the help of Codecademy and
+            Parsity I have been teaching myself the basics of
+            <span>HTML, CSS and Javascript</span> with the intention of finding
+            a career in the world of tech, web development and design. The site
+            you are currently browsing will act as a portfolio of the work I
+            have already completed and any future projects will be accessible
+            here also. Any feedback on the code I have used to build this site
+            is much appreciated, so feel free to contact me with any tips and
+            pointers you may have! <br /><br />
+            Thank-you for taking the time to visit my site, it's much
+            appreciated!
+          </p>
+        </div>
+
+        <div class="skills-section" id="skills">
+          <h2 class="section-title">My Current Skillset</h2>
+
+          <div class="skills-wrapper">
+            <div class="skill-card languages">
+              <h3>Programming Languages:</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+            <div class="skill-card frameworks">
+              <h3>Frameworks:</h3>
+              <ul>
+                <li>Node.js</li>
+              </ul>
+            </div>
+            <div class="skill-card tools">
+              <h3>Tools:</h3>
+              <ul>
+                <li>Git</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <div class="portfolio-section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <a href="#top"
+                  ><img src="resources/background-web.jpg" alt="" role="link" />
+                  <p>Portfolio Site</p>
+                </a>
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/mixed_messages"
+                  ><img src="resources/marvel-image.jpg" alt="" role="link" />
+                  <p>Marvel Battle Sim</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/whaleTalk"
+                  ><img src="resources/whale-image.jpg" alt="" role="link" />
+                  <p>Whale Translator</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/secretMessage"
+                  ><img src="resources/secret-message.jpg" alt="" role="link" />
+                  <p>Message Decoder</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/trainingDays"
+                  ><img src="resources/raceday-image.jpg" alt="" role="link" />
+                  <p>Race Day Exercise</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/RockPaperScissors"
+                  ><img src="resources/scissors-game.jpg" alt="" role="link" />
+                  <p>Rock Paper Scissors Game</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/Mag-8-ball"
+                  ><img src="resources/8eight-ball.jpg" alt="" role="link" />
+                  <p>Magic 8-Ball</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/Dog-Years-Project"
+                  ><img src="resources/dog-days.jpg" alt="" role="link" />
+                  <p>Dog Age Calculator</p></a
+                >
+              </div>
+              <div class="portfolio-item">
+                <a href="https://github.com/SJK9476/KelvinProject"
+                  ><img
+                    src="resources/thermometer-image.jpg"
+                    alt=""
+                    role="link"
+                  />
+                  <p>Kelvin Temp Converter</p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-section" id="contact">
+            <div class="contact-card" id="contact-info">
+              <img
+                src="resources/profile pic.jpg"
+                alt="picture of me holding a dog "
+              />
+              <h2>Samuel King</h2>
+              <p class="personal-message">
+                If you would like to get together and collaborate on a project
+                you can find my contact details below!
+              </p>
+              <p>SAMUELJAMESKING94@GMAIL.COM</p>
+              <p>+44 74636 48597</p>
+            </div>
+          </div>
+          <div class="social-links-section" id="socials">
+            <h2 class="section-title">Socials</h2>
+            <div class="social-icons">
+              <a href="https://twitter.com/SamJamesK"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+              <a href="https://www.instagram.com/samueljamesk94/"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a href="https://github.com/SJK9476"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a href="https://www.linkedin.com/in/samuel-king-2a8ba8237/"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="portfolio.js"></script>
+  </body>
+</html>

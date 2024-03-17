@@ -1,0 +1,363 @@
+/* Root Styling */
+
+:root {
+    --clr-primary: #595959;
+    --clr-secondary: #4281A4;
+    --clr-accent: #6B0F1A;
+
+    --ff-logo: 'Major Mono Display', sans-serif;
+    --ff-heading: 'Montserrat', sans-serif;
+    --ff-heading-emp: 'Lobster', sans-serif;
+    --ff-section-title: 'Exo', sans-serif;
+    --ff-body: 'Catamaran', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --fs-300: 1.15rem;
+    --fs-400: 1.3rem;
+    --fs-500:1.45rem;
+    --fs-600: 1.7rem;
+    --fs-700: 2.5rem;
+}
+
+/*CSS reset*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/*Global Page styling*/
+
+* {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+}
+
+h1 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-700);
+    font-weight: 300;
+}
+
+h2 {
+    font-family: var(--ff-section-title);
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-600);
+    text-transform: uppercase;
+}
+
+main {
+   
+ max-width: 1350px;  
+ margin-inline: auto;
+ margin-top: 1rem;
+ text-align: center;
+    
+}
+
+/* header styling */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    background-color: var(--clr-secondary);
+    padding: 0.825rem 1.5rem;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo {
+    font-family: var(--ff-logo);
+    font-size: clamp(1.5rem, 4vw, 4.5rem);
+    color: white;
+    text-decoration: none;
+}
+
+.navigation-bar {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.2rem ;
+    list-style: none;
+    align-items: center;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    font-size: var(--fs-300);
+}
+
+.dark-mode {
+    background-color: white;
+    color: black;
+}
+
+button {
+    background-color: #6B0F1A;
+    padding: 0.5rem;
+    border-color: white;
+    border-radius: 25px;
+}
+
+
+/* welcome banner styling */
+
+.welcome-banner {
+    margin: 3rem 1rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 40%;
+    padding: 2rem 1rem ;
+    border-bottom: solid 0.25rem var(--clr-accent);
+    align-items: center;
+    
+}
+
+@media (width < 1050px) {
+    .welcome-banner {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+h1 {
+    line-height: 1.5;
+}
+
+.welcome-message {
+    display: grid;
+    text-wrap: balance;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    border: solid .25rem white;
+    border-radius: 50px;
+    padding: 0.5rem;
+}
+
+.welcome-message > h1 span {
+    font-family: var(--ff-heading-emp);
+    font-size: clamp(4rem, 4vw, 7rem);
+    color: var(--clr-accent);
+    font-weight: 700;
+}
+
+.heading-blurb span {
+    color: #4281A4;
+    font-family: var(--ff-heading-emp);
+}
+
+.welcome-banner img {
+    object-fit: cover;
+    border: 0.4rem solid var(--clr-secondary);
+    border-radius: 25px;
+}
+
+/* about section styling */
+
+.about-section {
+    text-align: center;
+}
+
+.about-section p {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    line-height: 1.75;
+    letter-spacing: 0.15;
+}
+
+.about-section span {
+    color: var(--clr-secondary);
+    text-decoration: underline solid var(--clr-accent);
+    font-weight: 700;
+    font-size: larger;
+}
+
+/* skills section styling */
+
+.skills-section {
+    margin-top: 2rem;
+    margin-inline: 1.5rem;
+}
+
+.skills-wrapper {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+
+.skills-wrapper li {
+    list-style: none;
+}
+
+.skill-card {
+    /* background-color: var(--clr-primary); */
+    padding: 1rem;
+}
+
+.skill-card h3 {
+    color: var(--clr-accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* portfolio section styling */
+
+.portfolio-section {
+    margin-top: 2rem;
+}
+
+.portfolio-grid {
+    margin-top: 1.5rem;
+    margin-inline: 2rem;
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;    
+}
+
+.portfolio-item {
+    position: relative;
+    
+
+}
+
+.portfolio-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.portfolio-item p {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    width: 100%;
+    background-color: rgba(107, 15, 26, 0.8);
+    font-size: 1.5rem;
+
+}
+
+/* contact card styling */
+
+.contact-card {
+    margin-top: 6rem;
+    text-align: center;
+    max-width: 30rem;
+    display: grid;
+    gap: 1.5rem;
+    margin-inline: auto;
+    padding-bottom: 1rem;
+    background-color: #4281A4;
+}
+
+.personal-message {
+    text-wrap: balance;
+
+}
+
+/* social section styling */
+
+.social-links-section {
+    display: grid;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.social-icons {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+ion-icon {
+    font-size: 3rem;
+    margin-inline: 2rem;
+}
+
